@@ -1,3 +1,16 @@
+<!-- I had to run the following commands in the terminal to be able to connect to the lidar -->
+<!-- sudo adduser $USER dialout -->
+<!-- sudo chmod 666 /dev/ttyUSB0 --> 
+<!-- This has to be done each time a session is started, unless you make a udev rule -->
+
+
+
+
+
+
+
+
+
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
