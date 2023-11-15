@@ -31,7 +31,7 @@ def generate_launch_description():
         parameters=[{'robot_description': robot_description}, controller_params_file]
     )
 
-    delayed_controller_manager = TimerAction(period=3.0, actions=controller_manager)
+    delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
 
 
 
