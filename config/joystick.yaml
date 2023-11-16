@@ -14,7 +14,7 @@ teleop_node:
       x: 1.0
 
     axis_angular:
-      yaw: 1
+      yaw: 0
     scale_angular:
       yaw: 0.5
     scale_angular_turbo:
@@ -23,4 +23,4 @@ teleop_node:
     enable_button: 6
     enable_turbo_button: 5
 
-    require_enable_button: true
+    require_enable_button: false
