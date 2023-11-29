@@ -68,7 +68,7 @@ def generate_launch_description():
 
     delayed_lidar = RegisterEventHandler(
         event_handler=OnProcessStart(
-            target_action=controller_manager,
+            target_action=delayed_joint_broad_spawner,
             on_start=[lidar]
         )
     )
@@ -79,5 +79,5 @@ def generate_launch_description():
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
-        lidar
+        delayed_lidar
     ])
