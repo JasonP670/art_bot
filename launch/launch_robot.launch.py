@@ -61,23 +61,10 @@ def generate_launch_description():
         )
     )
 
-    lidar = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory(package_name), 'launch', 'rplidar.launch.py')])
-    )
-
-    delayed_lidar = RegisterEventHandler(
-        event_handler=OnProcessStart(
-            target_action=delayed_joint_broad_spawner,
-            on_start=[lidar]
-        )
-    )
-
 
     return LaunchDescription([
         rsp,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
-        delayed_lidar
     ])
